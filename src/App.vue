@@ -7,6 +7,9 @@ const chooseRating = ref(0);
 </script>
 
 <template>
-  <RatingCard :ratingNumbers="ratingNumbers" :chooseRating="chooseRating" />
-  <!-- <ResponseCard /> -->
+  <RatingCard
+    @rating-number="chooseRating = $event"
+    :ratingNumbers="ratingNumbers"
+  />
+  <ResponseCard :ratingNumber="chooseRating" />
 </template>

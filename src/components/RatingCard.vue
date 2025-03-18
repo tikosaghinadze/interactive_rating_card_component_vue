@@ -2,7 +2,6 @@
 import { ref, defineEmits, defineProps } from "vue";
 const props = defineProps({
   ratingNumbers: Array,
-  chooseRating: String,
 });
 
 const emit = defineEmits(["rating-number"]);
