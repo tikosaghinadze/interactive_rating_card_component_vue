@@ -4,7 +4,7 @@ const props = defineProps({
   ratingNumbers: Array,
 });
 
-const emit = defineEmits(["rating-number"]);
+const emit = defineEmits(["rating-number", "submit"]);
 const selectedRating = ref(null);
 
 const chooseRating = (ratingNumber) => {
@@ -46,6 +46,7 @@ const chooseRating = (ratingNumber) => {
       </li>
     </ul>
     <button
+      @click="emit('submit')"
       class="bg-[#FC7614] hover:bg-white duration-300 text-[#131518] w-full py-[15px] rounded-[50px] mt-8 uppercase font-bold border-none"
     >
       submit
